@@ -2,12 +2,12 @@ import { Component, OnInit } from '@angular/core';
 
 class Registration {
   constructor(
-    public nombres: string = '',
-    public apellidos: string = '',
-    public edad: number,
-    public email: string = '',
-    public telefono: string = '',
-    public tipoPase: string = ''
+    public nombres?: string,
+    public apellidos?: string,
+    public edad?: number,
+    public email?: string,
+    public telefono?: string,
+    public tipoPase?: string
   ) {}
 }
 
@@ -26,7 +26,6 @@ export class HomeComponent implements OnInit {
   tiposPases: string[] = ['Pase Full', 'Pase Energía', 'Pase Materiales', 'Pase Infraestructura', 'Pase Logístico', 'Pase TIC'];
 
   constructor() {
-    this.registrations.push(new Registration('Brian', 'Vanegas', 30, 'brian.vanegas@udea.edu.co', '3113373784', 'Pase Full'));
   }
 
   ngOnInit() {
